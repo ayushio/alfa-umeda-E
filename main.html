@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -122,7 +121,7 @@ Youtube貼り付けここまで -->
                 何故だろう・・・ここのオーナーは日本人なのか？<br><br><br>
                 鳥居が1/2で割ると・・・  <br><br></p></div>
             </div>
-          </div>
+          
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
               <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
@@ -188,7 +187,9 @@ Youtube貼り付けここまで -->
                 <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
+      
         </section>
+      </div>
         <!-- STAGE2クリア画面　ここまで -->
       
       <!-- STAGE2　ここまで -->
@@ -227,14 +228,15 @@ Youtube貼り付けここまで -->
               v-on:answer-input="answerInput($event, 'stage3', 1, 'final')" は送信ボタンをクリックした時の動作を決める関数です。
               4番目の引数 'final' は最終ステージを表します。
             ------------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage３', 1, 'final')"></answer-input>
+            <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage３', 1)"></answer-input>
             
             <a class="link-hint" href="hint3.html" target="hint3">ヒントをみる ></a>
           </div>
           
          </section>
-        
-        <!-- STAGE3-1解答入力セクション　ここまで -->
+        </div>
+    </div>
+         <!-- STAGE3-1解答入力セクション　ここまで -->
 
 <!-- STAGE3-2問題セクション を追加　
           <section class="section">
@@ -273,10 +275,9 @@ Youtube貼り付けここまで -->
 STAGE3-3追加　ここまで -->
 
           
-      </div>
+  
       <!-- STAGE3　ここまで -->
 
-    </div>
   </main>
   <footer class="footer section bg-color--gray">
     <div class="container">
